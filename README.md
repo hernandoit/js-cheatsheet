@@ -1,4 +1,4 @@
-### Control Flow 
+# CONTROL-FLOW
 
 ## ifStatement
 
@@ -24,11 +24,16 @@ if (name === 'Rachel') {
 ## whileLoop
 
 ```js
+// initializes the count variable to one
 let count = 1
+// begins the loop and stays in while the count is less than 5
 while (count < 5) {
+  // tells us we are in the loop
   console.log('Inside of the loop, count is ' + count)
+  // adds one to the count until we have reached the count on the condition
   count++
 }
+  // tells us we are out of the loop
 console.log('Outside of the loop, count is ' + count)
 ```
 
