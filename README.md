@@ -33,15 +33,27 @@ for ([initialization]; [condition]; [final-expression])
 
 
 # Terms
-1. A callback function - is a function we pass to another function as an argument
-2. predicate function - the function returns either true or false (a boolean value)
-3. anonymous function - a function that does not have a name (that is not stored in a variable)
-4. named function - a function that has a name (that is stored in a variable)
-5. implicit return - return the only expression without explicitly writing the word "return" (An implied return)
+1. `callback function` - is a function we pass to another function as an argument
+2. `predicate function` - the function returns either `true` or `false` (a boolean value)
+3. `anonymous function` - a function that does not have a name (that is not stored in a variable)
+4. `named function` - a function that has a name (that is stored in a variable)
+5. `implicit return` - return the only expression without explicitly writing the word "return" (An implied return)
 
-### `'forEach'`
 
-> For each element in our array, call the provided function on that element.
+## `this`
+## How to determine what `this` refers to:
+1. In a function invoked with new, `this` will be the constructed object.
+2. In a function invoked with `.call` or `.apply`, `this` will be the first argument passed to call or apply.
+3. In a function created with `.bind,` `this` will be the first argument passed to `.bind`.
+4. In a (non-fat arrow) function declared as a method on an object, `this` will be the object on which the method is declared.
+5. If none of the above apply, `this` will be either the global object, or undefined depending on whether `'use strict'` is enabled.
+
+
+# `forEach`
+## Description
+For each element in our array, call the provided function on that element.
+
+### Example action
 
 ```js
 const array1 = ['a', 'b', 'c'];
@@ -60,9 +72,9 @@ c. array - (optional) the array `forEach` was called upon
 undefined
 
 
-### `'map'`
-
-> Returns a **new array** where each element has been changed from the original array in some way.
+# `map`
+## Description
+Returns a **new array** where each element has been changed from the original array in some way.
 
 Note: The `map` function does not modify the original array.
 
@@ -91,7 +103,7 @@ const uppercaseDevelopers = developers.map(dev => dev.toUpperCase())
 Returns a new array, where each element is what was returned from the callback function.
 
 
-# Filter (find all)
+# `filter` (find all)
 ## Description
 Returns a new array with the elements that return `true`, when passed to our callback function.
 
@@ -124,7 +136,7 @@ A new array, with elements that returned true when passed to the function.
 
 If no elements return true, it returns an empty array.
 
-# findIndex (find index of the first element)
+# `findIndex` (find index of the first element)
 ## Description
 Returns the index of the first element, that returns `true` 
 when passed out callback function. Returns -1 if no element returns `true`.
@@ -155,7 +167,7 @@ const index = developers.findIndex(dev => dev[0] === 'N')
 ## Return Value
 The index of the first element that returns `true` when passed to our callback function. Otherwise `-1`
 
-# find (find one)
+# `find` (find one)
 ## Description
 Return the first element that returns `true` when passed to our callback function.
 
@@ -189,7 +201,7 @@ The value of the first element that returns true when passed to our `callback`.
 
 Otherwise returns `undefined`.
 
-# some
+# `some`
 ## Description
 The some method returns `true` if **any** element in our array, returns `true when passed to the callback function.
 
@@ -224,7 +236,7 @@ true // Because Nathan's name starts with an N
 
 `false` if **every** element returned a `falsy` value
 
-# every
+# `every`
 ## Description
 The `every` method returns `true` if **every** element in our array, returns `true` when passed to the callback function.
 
