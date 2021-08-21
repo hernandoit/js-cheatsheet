@@ -1,4 +1,18 @@
-# JS cheat sheet
+# `JS cheat sheet`
+
+`Table of Contents`
+
+- [condtionals](#conditional-statements)
+- [loops](#loops)
+- [terms](#terms)
+- [this](#this)
+- [forEach](#foreach)
+- [map](#map)
+- [filter](#filter)
+- [findIndex](#findindex)
+- [find](#find)
+- [some](#some)
+- [every](#every)
 
 ## Conditional statements
 ### `'if...else'` 
@@ -32,7 +46,7 @@ for ([initialization]; [condition]; [final-expression])
 ```
 
 
-# Terms
+# `Terms`
 1. `callback function` - is a function we pass to another function as an argument
 2. `predicate function` - the function returns either `true` or `false` (a boolean value)
 3. `anonymous function` - a function that does not have a name (that is not stored in a variable)
@@ -103,7 +117,8 @@ const uppercaseDevelopers = developers.map(dev => dev.toUpperCase())
 Returns a new array, where each element is what was returned from the callback function.
 
 
-# `filter` (find all)
+# `filter` 
+### `(find all)`
 ## Description
 Returns a new array with the elements that return `true`, when passed to our callback function.
 
@@ -136,7 +151,8 @@ A new array, with elements that returned true when passed to the function.
 
 If no elements return true, it returns an empty array.
 
-# `findIndex` (find index of the first element)
+# `findIndex` 
+### `(find index of the first element)`
 ## Description
 Returns the index of the first element, that returns `true` 
 when passed out callback function. Returns -1 if no element returns `true`.
@@ -167,7 +183,8 @@ const index = developers.findIndex(dev => dev[0] === 'N')
 ## Return Value
 The index of the first element that returns `true` when passed to our callback function. Otherwise `-1`
 
-# `find` (find one)
+# `find` 
+### `(find one)`
 ## Description
 Return the first element that returns `true` when passed to our callback function.
 
