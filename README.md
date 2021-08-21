@@ -1,4 +1,4 @@
-# `JS cheat sheet`
+# `JavaScript cheat sheet`
 
 `Table of Contents`
 
@@ -52,6 +52,8 @@ for ([initialization]; [condition]; [final-expression])
 3. `anonymous function` - a function that does not have a name (that is not stored in a variable)
 4. `named function` - a function that has a name (that is stored in a variable)
 5. `implicit return` - return the only expression without explicitly writing the word "return" (An implied return)
+6. `Globally scoped` variables aren't declared inside of any code block, and are available anywhere in the program.
+7. `Locally scoped` variables are only available inside of the code block they're declared within. A let i = 0 declaration inside of a for loop is a classic example– you won't be able to access that particular i variable outside of the for loop.
 
 
 ## `this`
